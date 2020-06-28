@@ -18,8 +18,12 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'core'
+    'core',
+    'easy_maps'
 ]
+
+EASY_MAPS_GOOGLE_KEY = 'AIzaSyAJ5JXZ93yrdUnNX8nV52Iv8zJZHWzOFgk'
+EASY_MAPS_CENTER = (23.869969, 90.391005)
 
 AUTHENTICATION_BACKENDS = [
     # Needed to login by username in Django admin, regardless of `allauth`

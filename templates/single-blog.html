@@ -67,7 +67,7 @@
           <nav class="navbar navbar-expand-lg navbar-light w-100">
             <!-- Brand and toggle get grouped for better mobile display -->
             <a class="navbar-brand logo_h" href="{% url 'core:index' %}">
-              <img src="img/logo.png" alt="" />
+              <img src="{% static 'img/logo.png' %}" alt="" />
             </a>
             <button
               class="navbar-toggler"
@@ -325,7 +325,7 @@
                   
                   <div class="blog-author">
                     <div class="media align-items-center">
-                      <img src="img/blog/author.png" alt="">
+                      <img src="{% static 'img/blog/author.png' %}" alt="">
                       <div class="media-body">
                         <a href="#">
                           <h4>Harvard milan</h4>
@@ -341,7 +341,7 @@
                         <div class="single-comment justify-content-between d-flex">
                           <div class="user justify-content-between d-flex">
                               <div class="thumb">
-                                  <img src="img/blog/c1.png" alt="">
+                                  <img src="{% static 'img/blog/c1.png' %}" alt="">
                               </div>
                               <div class="desc">
                                   <p class="comment">
@@ -369,7 +369,7 @@
                           <div class="single-comment justify-content-between d-flex">
                               <div class="user justify-content-between d-flex">
                                   <div class="thumb">
-                                      <img src="img/blog/c2.png" alt="">
+                                      <img src="{% static 'img/blog/c2.png' %}" alt="">
                                   </div>
                                   <div class="desc">
                                       <p class="comment">
@@ -397,7 +397,7 @@
                           <div class="single-comment justify-content-between d-flex">
                               <div class="user justify-content-between d-flex">
                                   <div class="thumb">
-                                      <img src="img/blog/c3.png" alt="">
+                                      <img src="{% static 'img/blog/c3.png' %}" alt="">
                                   </div>
                                   <div class="desc">
                                       <p class="comment">
@@ -716,7 +716,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'js/popper.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/stellar.js"></script>
+    <script src="{% static 'js/stellar.js' %}"></script>
     <script src="{% static 'vendors/lightbox/simpleLightbox.min.js' %}"></script>
     <script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
     <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>

@@ -137,12 +137,7 @@
                       <ul class="dropdown-menu">
                         <li class="nav-item">
                           <a class="nav-link" href="{% url 'core:blog' %}">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="{% url 'core:singleblog' %}"
-                            >Blog Details</a
-                          >
-                        </li>
+                        </li>     
                       </ul>
                     </li>
                     <li class="nav-item submenu dropdown">
@@ -219,7 +214,6 @@
             <div class="page_link">
               <a href="{% url 'core:index' %}">Home</a>
               <a href="{% url 'core:blog' %}">Blog </a>
-              <a href="{% url 'core:singleblog' %}">Blog Details</a>
             </div>
           </div>
         </div>
@@ -228,42 +222,21 @@
     <!--================End Home Banner Area =================-->
 
     <!--================Blog Area =================-->
-	<section class="blog_area single-post-area section_gap">
+<section class="blog_area single-post-area section_gap">
 			<div class="container">
 					<div class="row">
 							<div class="col-lg-8 posts-list">
 									<div class="single-post">
 													<div class="feature-img">
-															<img class="img-fluid" src="{% static 'img/blog/main-blog/m-blog-1.jpg' %}" alt="">
+															<img class="img-fluid" src="{{ blog.image.url }}" alt="">
 													</div>
 											<div class="blog_details">
-													<h2>Second divided from form fish beast made every of seas
-                              all gathered us saying he our</h2>
+													<h2>{{ blog.title }}</h2>
                           <ul class="blog-info-link mt-3 mb-4">
                               <li><a href="#"><i class="ti-user"></i> Travel, Lifestyle</a></li>
                               <li><a href="#"><i class="ti-comments"></i> 03 Comments</a></li>
                             </ul>
-													<p class="excert">
-														MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower
-
-													</p>
-													<p>
-															MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually 
-                          </p>
-                          <div class="quote-wrapper">
-                            <div class="quotes">
-                                MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.
-                            </div>
-                          </div>
-                          
-                          
-                          <p>
-                              MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower
-
-                          </p>
-                          <p>
-                              MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually 
-                          </p>
+													<p>{{ blog.content }}</p>
 											</div>
                   </div>
                   <div class="navigation-top">
@@ -525,7 +498,7 @@
                           <div class="media post_item">
                               <img src="{% static 'img/blog/popular-post/post2.jpg' %}" alt="post">                              
                               <div class="media-body">
-                                  <a href="{% url 'core:singleblog' %}">
+                                  <a href="{% url 'core:singleblog' blog.id %}">
                                       <h3>The Amazing Hubble</h3>
                                   </a>
                                   <p>02 Hours ago</p>
@@ -534,7 +507,7 @@
                           <div class="media post_item">
                               <img src="{% static 'img/blog/popular-post/post3.jpg' %}" alt="post">                              
                               <div class="media-body">
-                                  <a href="{% url 'core:singleblog' %}">
+                                  <a href="{% url 'core:singleblog' blog.id %}">
                                       <h3>Astronomy Or Astrology</h3>
                                   </a>
                                   <p>03 Hours ago</p>
@@ -543,7 +516,7 @@
                           <div class="media post_item">
                               <img src="{% static 'img/blog/popular-post/post4.jpg' %}" alt="post">
                               <div class="media-body">
-                                  <a href="{% url 'core:singleblog' %}">
+                                  <a href="{% url 'core:singleblog' blog.id %}">
                                       <h3>Asteroids telescope</h3>
                                   </a>
                                   <p>01 Hours ago</p>
@@ -633,7 +606,12 @@
 					</div>
 			</div>
 	</section>
-	<!--================Blog Area =================-->
+
+
+
+
+
+    <!--================Blog Area =================-->
 
     <!--================ start footer Area  =================-->
     <footer class="footer-area section_gap">

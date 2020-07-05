@@ -55,6 +55,18 @@ class Article(models.Model):
     pub_date = models.DateField()
     image = models.FileField(blank=True)
     posted = models.DateTimeField(auto_now_add=True)
+    
+    previous_article = models.OneToOneField('self',
+                                 related_name='previous_post',
+                                 blank=True,
+                                 null=True,
+                                 on_delete=None)
+
+    next_article = models.OneToOneField('self',
+                                 related_name='next_post',
+                                 blank=True,
+                                 null=True,
+                                 on_delete=None)
 
     def __str__(self):
         return self.title

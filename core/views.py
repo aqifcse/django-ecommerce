@@ -1,10 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Article, ArticleImage
 
-
 def index(request):
     blogs = Article.objects.all()
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'blogs': blogs})
 
 
 def blog(request):

@@ -1,15 +1,6 @@
 # forms.py 
 from django import forms 
 from .models import *
-  
-class ArticleForm(forms.ModelForm): 
-  
-    class Meta: 
-        model = Article 
-        fields = ['image', 'title', 'preview', 'content'] 
-
-
-from django import forms
 from django_countries.fields import CountryField
 from django_countries.widgets import CountrySelectWidget
 
@@ -18,6 +9,14 @@ PAYMENT_CHOICES = (
     ('S', 'Stripe'),
     ('P', 'PayPal')
 )
+
+  
+class ArticleForm(forms.ModelForm): 
+  
+    class Meta: 
+        model = Article 
+        fields = ['image', 'title', 'preview', 'content'] 
+
 
 
 class CheckoutForm(forms.Form):
